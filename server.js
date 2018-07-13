@@ -9,8 +9,8 @@ var PORT = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-require("./Routing/apiRoutes")(app);
-require("./Routing/htmlRoutes")(app);
+require("./App/Routing/apiRoutes")(app);
+require("./App/Routing/htmlRoutes")(app);
 
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "/App/Public/home.html"));
