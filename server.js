@@ -12,13 +12,6 @@ app.use(bodyParser.json());
 require("./App/Routing/apiRoutes")(app);
 require("./App/Routing/htmlRoutes")(app);
 
-app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "/App/Public/home.html"));
-});
-
-app.get("/survey", function (req, res) {
-    res.sendFile(path.join(__dirname, "/App/Public/survey.html"));
-});
 
 
 app.listen(PORT, function () {
