@@ -9,6 +9,8 @@ var PORT = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use(express.static('App'))
+
 require("./App/Routing/apiRoutes")(app);
 require("./App/Routing/htmlRoutes")(app);
 

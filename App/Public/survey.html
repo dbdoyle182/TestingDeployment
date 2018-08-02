@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <title>Document</title>
 </head>
 
@@ -48,7 +49,7 @@
             <div class="quiz">
                 <strong>Question 1</strong>
                 </h5>
-                <p>I see myself as extroverted, enthusiastic.</p>
+                <p>I am extroverted, enthusiastic.</p>
                 <select data-placeholder="" class="browser-default" id="q1">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -60,7 +61,7 @@
                 <h5>
                     <strong>Question 2</strong>
                 </h5>
-                <p>I see myself as critical, quarrelsome.</p>
+                <p>I am critical, quarrelsome.</p>
                 <select data-placeholder="" class="browser-default" id="q2">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -72,7 +73,7 @@
                 <h5>
                     <strong>Question 3</strong>
                 </h5>
-                <p>I see myself as dependable, self-disciplined.</p>
+                <p>I am dependable, self-disciplined.</p>
                 <select data-placeholder="" class="browser-default" id="q3">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -84,7 +85,7 @@
                 <h5>
                     <strong>Question 4</strong>
                 </h5>
-                <p>I see myself as anxious, easily upset.</p>
+                <p>I am anxious, easily upset.</p>
                 <select data-placeholder="" class="browser-default" id="q4">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -96,7 +97,7 @@
                 <h5>
                     <strong>Question 5</strong>
                 </h5>
-                <p>I see myself as open to new experiences.</p>
+                <p>I am open to new experiences.</p>
                 <select data-placeholder="" class="browser-default" id="q5">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -108,7 +109,7 @@
                 <h5>
                     <strong>Question 6</strong>
                 </h5>
-                <p>I see myself as reserved, quiet</p>
+                <p>I am reserved, quiet</p>
                 <select data-placeholder="" class="browser-default" id="q6">
                     <option value="">Choose an Option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -120,7 +121,7 @@
                 <h5>
                     <strong>Question 7</strong>
                 </h5>
-                <p>I see myself as sympathetic.</p>
+                <p>I am sympathetic.</p>
                 <select data-placeholder="" class="browser-default" id="q7">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -132,7 +133,7 @@
                 <h5>
                     <strong>Question 8</strong>
                 </h5>
-                <p>I see myself as disorganized.</p>
+                <p>I am disorganized.</p>
                 <select data-placeholder="" class="browser-default" id="q8">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -144,7 +145,7 @@
                 <h5>
                     <strong>Question 9</strong>
                 </h5>
-                <p>I see myself as calm, emotionally stable.</p>
+                <p>I am calm, emotionally stable.</p>
                 <select data-placeholder="" class="browser-default" id="q9">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -156,7 +157,7 @@
                 <h5>
                     <strong>Question 10</strong>
                 </h5>
-                <p>I see myself as practical, conventional.</p>
+                <p>I am practical, conventional.</p>
                 <select data-placeholder="" class="browser-default" id="q10">
                     <option value="">Choose an option</option>
                     <option value="1">1 (Strongly Disagree)</option>
@@ -168,13 +169,13 @@
                 <br>
             </div>
             <div class="button">
-                <a href="survey.html">
-                    <button type="submit" class="btn btn-danger btn-lg submit">
+                <a href="/survey">
+                    <button type="submit" id="submit" class="btn btn-danger btn-lg submit">
                         <span class="fa fa-plus"></span> Submit Survey</button>
                 </a>
             </div>
             <div>
-                <p>Thank you for completing the survey, its time to find some new friends!</p>
+                <p>Thank you for completing the survey, time to find some new friends!</p>
                 <br>
                 <br>
             </div>
@@ -190,19 +191,25 @@
 <script type="text/javascript">
     $(".submit").on("click", function (event) {
         event.preventDefault();
-        var answers = {
-            questionOne: $("#q1").val().trim(),
-            questionTwo: $("#q2").val().trim(),
-            questionThree: $("#q3").val().trim(),
-            questionFour: $("#q4").val().trim(),
-            questionFive: $("#q5").val().trim(),
-            questionSix: $("#q6").val().trim(),
-            questionSeven: $("#q7").val().trim(),
-            questionEight: $("#q8").val().trim(),
-            questionNine: $("#q9").val().trim(),
-            questionTen: $("#q10").val().trim(),
-        };
+        var answers = [
+            $("#q1").val().trim(),
+            $("#q2").val().trim(),
+            $("#q3").val().trim(),
+            $("#q4").val().trim(),
+            $("#q5").val().trim(),
+            ("#q6").val().trim(),
+            $("#q7").val().trim(),
+            $("#q8").val().trim(),
+            $("#q9").val().trim(),
+            $("#q10").val().trim(),
+        ];
 
-        console.log(newReservation);
+        var friends = {
+            name: '',
+            image: "",
+            answers: answers
+        }
+
+        console.log(answers);
     });
 </script>
