@@ -9,8 +9,8 @@ app.use(bodyParser.json());
 
 // app.use(express.static('App'))
 
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+require("./App/Routing/apiRoutes")(app);
+require("./App/Routing/htmlRoutes")(app);
 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
